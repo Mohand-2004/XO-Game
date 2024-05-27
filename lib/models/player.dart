@@ -37,7 +37,9 @@ class Player{
   }
 
   void addCell(int cell){
-    _cells.add(cell);
+    if(cell != 0){
+      _cells.add(cell);
+    }
   }
 }
 

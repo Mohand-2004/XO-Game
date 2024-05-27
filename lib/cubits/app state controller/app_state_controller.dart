@@ -27,7 +27,6 @@ class AppStateController{
   // swap turns
   void _swapturns(){
     _swapPlayersQueue();
-    grid.disableClikedCell();
     infoCubit.changeturns(playersQueue.peek()!);
   }
 
@@ -35,6 +34,9 @@ class AppStateController{
   void checkState(){
     // add the current cell to current player cells
     playersQueue.peek()!.addCell(grid.clickedCellIndex+1);
+
+    // disable clicked cells
+    grid.disableClikedCell();
 
     // check if the current player has won
     if(playersQueue.peek()!.hasWon()){
@@ -49,7 +51,7 @@ class AppStateController{
       // swap players in the players queue
       _swapPlayersQueue();
     }
-    else if(grid.clickedCells.length == 8){
+    else if(grid.clickedCells.length == 9){
       infoCubit.announceresult(TieResult());
       gridCubit.reset();
       // empty players cells list
