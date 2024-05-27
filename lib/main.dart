@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:xo_game/cubits/app%20state%20controller/app_state_controller.dart';
@@ -56,5 +57,13 @@ class XOGame extends StatelessWidget {
 }
 
 void main(){
+  // check orientation 
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+    [
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitUp,
+    ]
+  );
   runApp(const XOGame());
 }
