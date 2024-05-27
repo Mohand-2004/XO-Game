@@ -53,6 +53,7 @@ class AppStateController{
     }
     else if(grid.clickedCells.length == 9){
       infoCubit.announceresult(TieResult());
+      // reset grid to defualt state to play a new game
       gridCubit.reset();
       // empty players cells list
       _resetPlayersCells();

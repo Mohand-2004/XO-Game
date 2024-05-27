@@ -31,6 +31,7 @@ class Grid{
   void disableClikedCell(){
     if(clickedCellIndex != -1){
       clickedCells.add(clickedCellIndex+1);
+      clickedCellIndex = -1;
     }
   } 
 }
