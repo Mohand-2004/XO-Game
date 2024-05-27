@@ -18,9 +18,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // home screen
     return Scaffold(
+      backgroundColor: Colors.white,
         appBar: PreferredSize(
             preferredSize: Size(MediaQuery.of(context).size.width,
-                MediaQuery.of(context).size.height * 0.1),
+            MediaQuery.of(context).size.height * 0.1),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

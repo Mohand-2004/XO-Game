@@ -16,6 +16,7 @@ class XOGame extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          backgroundColor: Colors.white,
           body: BlocProvider(
             create: (context) => appStateController.infoCubit,
             child: Stack(
